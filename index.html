@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTER EGO — 3D Luxury Wearables</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-fade-in">
+
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>3D PRINTED WEARABLES &bull; MULTIPLE SIDES. ONE YOU &bull; CUSTOM FIT &bull; GENDER INCLUSIVE LUXURY &bull; </span>
+      <span>3D PRINTED WEARABLES &bull; MULTIPLE SIDES. ONE YOU &bull; CUSTOM FIT &bull; GENDER INCLUSIVE LUXURY &bull; </span>
+    </div>
+  </div>
+
+  <header class="floating-nav">
+    <a href="index.html" class="brand-logo">
+      <span class="logo-mark">ae</span>
+      <span class="logo-text">alter ego</span>
+    </a>
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Collection</a>
+      <a href="customizer.html">Customizer</a>
+      <a href="story.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="cart-trigger" id="cartBtn">
+        CART <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="hero-tag">2026 EDITION / VOL. 01</span>
+        <h1 class="hero-title">MULTIPLE SIDES.<br><em>ONE YOU.</em></h1>
+        <p class="hero-description">
+          Fashion isn't just about what you wear—it's about who you choose to be. 
+          Sculpted 3D wearables designed for ultimate self-expression.
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn-primary">EXPLORE DROP</a>
+          <a href="customizer.html" class="btn-outline">CUSTOMIZE PIECE</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="image-frame">
+          <img src="A9dhf.jpg" alt="Alter Ego Editorial Showcase" class="hero-img">
+          <div class="frame-tag">Brand logo</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-values">
+      <div class="section-header">
+        <h2>THE ALTER EGO MANIFESTO</h2>
+        <div class="line-divider"></div>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-num">01</span>
+          <h3>3D PRINTED PRECISION</h3>
+          <p>Sculptural, futuristic forms crafted through state-of-the-art additive manufacturing for unmatched detail and weightless strength.</p>
+        </div>
+
+        <div class="value-card accent-card">
+          <span class="value-num">02</span>
+          <h3>GENDER INCLUSIVE</h3>
+          <p>Fluid geometries engineered without boundaries. Accessories designed to empower every identity and aesthetic spectrum.</p>
+        </div>
+
+        <div class="value-card">
+          <span class="value-num">03</span>
+          <h3>UNBOUND CUSTOMIZATION</h3>
+          <p>Tailor finishes, proportions, and configurations to match your alter ego. Every piece is made uniquely yours on demand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-curation">
+      <div class="curation-header">
+        <div>
+          <span class="subtext">CURATED ACCESSORIES</span>
+          <h2>LATEST RELEASES</h2>
+        </div>
+        <a href="shop.html" class="link-arrow">VIEW ALL PIECES &rarr;</a>
+      </div>
+
+      <div class="curation-grid">
+        <div class="curation-card" data-id="1">
+          <div class="card-image-wrap">
+            <span class="card-badge">3D PRINTED</span>
+            <img src="bag.jpeg" alt="3D floral bag">
+            <button class="quick-add-btn" onclick="addToCart('3D FLORAL BAG')">+ QUICK ADD</button>
+          </div>
+          <div class="card-details">
+            <h3>3D floral bag</h3>
+            <span class="card-price">₦25k</span>
+          </div>
+        </div>
+
+        <div class="curation-card" data-id="2">
+          <div class="card-image-wrap">
+            <span class="card-badge">CUSTOMIZABLE</span>
+            <img src="corset.jpeg" alt="3D metallic corset">
+            <button class="quick-add-btn" onclick="addToCart('3D METALLIC CORSET')">+ QUICK ADD</button>
+          </div>
+          <div class="card-details">
+            <h3>3D metallic corset</h3>
+            <span class="card-price">₦40k</span>
+          </div>
+        </div>
+
+        <div class="curation-card" data-id="3">
+          <div class="card-image-wrap">
+            <span class="card-badge">LIMITED</span>
+            <img src="pins.jpeg" alt="Futuristic Hair Pin">
+            <button class="quick-add-btn" onclick="addToCart('Futuristic Hair Pin')">+ QUICK ADD</button>
+          </div>
+          <div class="card-details">
+            <h3>Minimalist Hair Pin</h3>
+            <span class="card-price">₦8k</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3>YOUR CART</h3>
+      <button class="close-drawer" id="closeCart">&times;</button>
+    </div>
+    <div class="drawer-body" id="cartItemsList">
+      <p class="empty-msg">Your cart is currently empty.</p>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-total">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₦0</span>
+      </div>
+      <button class="btn-primary checkout-btn">PROCEED TO CHECKOUT</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2 class="footer-logo">alter ego</h2>
+        <p>Accessories That Fit Every You. Custom, 3D-Printed, Uniquely You.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>PAGES</h4>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop Collection</a>
+          <a href="customizer.html">3D Customizer</a>
+          <a href="story.html">Our Story</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>SOCIAL</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ALTER EGO. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
